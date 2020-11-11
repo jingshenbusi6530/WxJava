@@ -64,7 +64,7 @@ public abstract class BaseWxPayServiceImpl implements WxPayService {
   private RedpackService redpackService = new RedpackServiceImpl(this);
   private PayScoreService payScoreService = new PayScoreServiceImpl(this);
   private EcommerceService ecommerceService = new EcommerceServiceImpl(this);
-
+  private BusinessCircleService businessCircleService = new BusinessCircleServiceImpl(this);
   /**
    * The Config.
    */
@@ -93,6 +93,11 @@ public abstract class BaseWxPayServiceImpl implements WxPayService {
   @Override
   public EcommerceService getEcommerceService() {
     return ecommerceService;
+  }
+
+  @Override
+  public BusinessCircleService getBusinessCircleService() {
+    return this.businessCircleService;
   }
 
   @Override
